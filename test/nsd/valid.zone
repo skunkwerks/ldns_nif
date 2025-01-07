@@ -1,0 +1,11 @@
+example.com. 3600 IN SOA ns1.example.com. admin.example.com. (
+  2023121901 ; serial
+  3600       ; refresh
+  1800       ; retry
+  604800     ; expire
+  3600       ; minimum
+)
+example.com. 3600 IN NS ns1.example.com.
+example.com. 3600 IN NS ns2.example.com.
+www.example.com. 3600 IN A 192.0.2.1
+mail.example.com. 3600 IN A 192.0.2.2

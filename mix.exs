@@ -1,4 +1,4 @@
-defmodule Ldns.MixProject do
+defmodule LDNS.MixProject do
   use Mix.Project
 
   def project do
@@ -7,7 +7,10 @@ defmodule Ldns.MixProject do
       version: "0.1.0",
       elixir: "~> 1.18",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      compilers: compilers(Mix.env()),
+      make_env: %{"MIX_ENV" => to_string(Mix.env())},
+      make_clean: ["clean"]
     ]
   end
 
@@ -21,8 +24,11 @@ defmodule Ldns.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:elixir_make, "~> 0.9", runtime: false}
     ]
+  end
+
+  defp compilers(_) do
+    [:elixir_make] ++ Mix.compilers()
   end
 end
