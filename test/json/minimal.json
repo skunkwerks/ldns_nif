@@ -1,0 +1,19 @@
+{
+  "name": "example.org",
+  "records": [
+    {
+      "name": "example.org",
+      "type": "SOA",
+      "ttl": 86400,
+      "data": {
+        "mname": "ns.cabal5.net",
+        "rname": "root.example.org",
+        "serial": 1601227221,
+        "refresh": 86400,
+        "retry": 7200,
+        "expire": 3600000,
+        "minimum": 1750
+      }
+    }
+  ]
+}

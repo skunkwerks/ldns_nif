@@ -42,4 +42,32 @@ defmodule LDNS do
   def validate(_binary) do
     :erlang.nif_error(:nif_not_loaded)
   end
+
+  @doc """
+  Converts a DNS zone file to JSON format. The final JSON parsing is done
+  using Jason library, after NIF processing.
+
+  Takes a binary containing a zone file and returns {:ok, json_string} if
+  successful, or {:error, error_type, line_number, error_message} if
+  parsing fails.
+
+  ## Examples
+
+      iex> zone = "example.org.            86400   IN      SOA ns.cabal5.net. root.example.org. 1601227221 86400 7200 3600000 1750"
+      iex> {:ok, json} = LDNS.to_json(zone)
+      iex> is_binary(json)
+      true
+  """
+  def to_json(binary) do
+    case validate(binary) do
+      :ok ->
+        case :erlang.nif_error(:nif_not_loaded) do
+          {:ok, map} -> {:ok, Jason.encode!(map)}
+          error -> error
+        end
+
+      error ->
+        error
+    end
+  end
 end
