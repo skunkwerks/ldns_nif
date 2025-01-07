@@ -1,0 +1,7 @@
+example.com. 3600 INVALID SOA ns1.example.com. admin.example.com. (
+  2023121901 ; serial
+  3600       ; refresh
+  1800       ; retry
+  604800     ; expire
+  3600       ; minimum
+)

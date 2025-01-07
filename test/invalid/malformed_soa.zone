@@ -1,0 +1,6 @@
+example.com. 3600 IN SOA ns1.example.com. (
+  2023121901
+  3600
+  1800
+  604800
+  3600
