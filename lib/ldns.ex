@@ -3,6 +3,8 @@ defmodule LDNS do
   LDNS bindings for Elixir.
   """
 
+  alias LDNS.{Record, Zone}
+
   @on_load :load_nif
 
   def load_nif do
@@ -53,30 +55,23 @@ defmodule LDNS do
   ## Examples
 
       iex> zonefile = "example.org.            86400   IN      SOA ns.cabal5.net. root.example.org. 1601227221 86400 7200 3600000 1750"
-      iex> {:ok, zone = %{}} = LDNS.to_map(zonefile)
-      {:ok,
-        %{
-          name: ~c"example.org.",
-          records: [
-            %{
-              data: %{
-                serial: 1601227221,
-                retry: 7200,
-                refresh: 86400,
-                mname: ~c"ns.cabal5.net.",
-                rname: ~c"root.example.org.",
-                expire: 3600000,
-                minimum: 1750
-              },
-              name: ~c"example.org.",
-              type: ~c"SOA",
-              ttl: 86400
-            }
-          ]
-        }}
-      true
+      iex> {:ok, zone} = LDNS.to_map(zonefile)
+      iex> %LDNS.Zone{name: name, records: [record]} = zone
+      iex> name
+      "example.org."
+      iex> %LDNS.Record{name: rname, type: type, ttl: ttl} = record
+      iex> {rname, type, ttl}
+      {"example.org.", "SOA", 86400}
+      iex> record.data.serial
+      1601227221
   """
-  def to_map(_binary) do
-    :erlang.nif_error(:nif_not_loaded)
+  def to_map(binary) do
+    case :erlang.nif_error(:nif_not_loaded) do
+      {:ok, map} ->
+        {:ok, struct(Zone, map)}
+
+      error ->
+        error
+    end
   end
 end

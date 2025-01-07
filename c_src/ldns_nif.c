@@ -126,8 +126,12 @@ to_map(ErlNifEnv *env, int argc, const ERL_NIF_TERM argv[])
 		if (soa) {
 			// fetch zone name
 			char *owner = ldns_rdf2str(ldns_rr_owner(soa));
-			ERL_NIF_TERM name_term = enif_make_string(env, owner,
-			    ERL_NIF_LATIN1);
+			size_t owner_len = strlen(owner);
+			ErlNifBinary owner_bin;
+			enif_alloc_binary(owner_len, &owner_bin);
+			memcpy(owner_bin.data, owner, owner_len);
+			ERL_NIF_TERM name_term = enif_make_binary(env,
+			    &owner_bin);
 			enif_make_map_put(env, map, enif_make_atom(env, "name"),
 			    name_term, &map);
 
@@ -138,7 +142,10 @@ to_map(ErlNifEnv *env, int argc, const ERL_NIF_TERM argv[])
 			    enif_make_atom(env, "name"), name_term, &soa_map);
 			enif_make_map_put(env, soa_map,
 			    enif_make_atom(env, "type"),
-			    enif_make_string(env, "SOA", ERL_NIF_LATIN1),
+			    enif_make_binary(env,
+				&(ErlNifBinary) {
+				    .data = (unsigned char *)"SOA",
+				    .size = 3 }),
 			    &soa_map);
 			enif_make_map_put(env, soa_map,
 			    enif_make_atom(env, "ttl"),
@@ -149,14 +156,22 @@ to_map(ErlNifEnv *env, int argc, const ERL_NIF_TERM argv[])
 			char *mname = ldns_rdf2str(ldns_rr_rdf(soa, 0));
 			char *rname = ldns_rdf2str(ldns_rr_rdf(soa, 1));
 
+			size_t mname_len = strlen(mname);
+			size_t rname_len = strlen(rname);
+
+			ErlNifBinary mname_bin, rname_bin;
+			enif_alloc_binary(mname_len, &mname_bin);
+			enif_alloc_binary(rname_len, &rname_bin);
+
+			memcpy(mname_bin.data, mname, mname_len);
+			memcpy(rname_bin.data, rname, rname_len);
+
 			enif_make_map_put(env, soa_data,
 			    enif_make_atom(env, "mname"),
-			    enif_make_string(env, mname, ERL_NIF_LATIN1),
-			    &soa_data);
+			    enif_make_binary(env, &mname_bin), &soa_data);
 			enif_make_map_put(env, soa_data,
 			    enif_make_atom(env, "rname"),
-			    enif_make_string(env, rname, ERL_NIF_LATIN1),
-			    &soa_data);
+			    enif_make_binary(env, &rname_bin), &soa_data);
 			enif_make_map_put(env, soa_data,
 			    enif_make_atom(env, "serial"),
 			    enif_make_uint64(env,
