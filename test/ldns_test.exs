@@ -20,7 +20,7 @@ defmodule LDNSTest do
     result = LDNS.validate("invalid @ record")
     {:error, line, msg, type} = result
     assert is_integer(line)
-    assert is_list(msg)
+    assert is_binary(msg)
     assert is_atom(type)
   end
 
@@ -56,13 +56,13 @@ defmodule LDNSTest do
     test "detects malformed SOA record" do
       contents = File.read!(Path.join(@invalid_fixtures, "malformed_soa.zone"))
       assert {:error, 6, msg, :unknown_error} = LDNS.validate(contents)
-      assert to_string(msg) =~ "value expected"
+      assert msg =~ "value expected"
     end
 
     test "detects invalid TTL" do
       contents = File.read!(Path.join(@invalid_fixtures, "invalid_ttl.zone"))
       assert {:error, _, msg, :rdata_error} = LDNS.validate(contents)
-      assert to_string(msg) =~ "could not parse"
+      assert msg =~ "could not parse"
     end
 
     test "detects invalid class" do
