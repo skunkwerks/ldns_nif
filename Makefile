@@ -11,7 +11,7 @@ all: ${NIF_SO}
 ${PRIV_DIR}:
 	mkdir -p ${PRIV_DIR}
 
-${NIF_SO}: ${PRIV_DIR} c_src/ldns_nif.c
+${NIF_SO}: c_src/ldns_nif.c ${PRIV_DIR}
 	${CC} ${CFLAGS} $< ${LDFLAGS} -o $@
 
 clean:

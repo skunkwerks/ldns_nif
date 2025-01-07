@@ -54,7 +54,26 @@ defmodule LDNS do
 
       iex> zonefile = "example.org.            86400   IN      SOA ns.cabal5.net. root.example.org. 1601227221 86400 7200 3600000 1750"
       iex> {:ok, zone = %{}} = LDNS.to_map(zonefile)
-      iex> is_binary(json)
+      {:ok,
+        %{
+          name: ~c"example.org.",
+          records: [
+            %{
+              data: %{
+                serial: 1601227221,
+                retry: 7200,
+                refresh: 86400,
+                mname: ~c"ns.cabal5.net.",
+                rname: ~c"root.example.org.",
+                expire: 3600000,
+                minimum: 1750
+              },
+              name: ~c"example.org.",
+              type: ~c"SOA",
+              ttl: 86400
+            }
+          ]
+        }}
       true
   """
   def to_map(_binary) do
