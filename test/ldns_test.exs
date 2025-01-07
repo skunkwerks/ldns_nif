@@ -18,10 +18,10 @@ defmodule LDNSTest do
 
   test "rejects an invalid zone file" do
     result = LDNS.validate("invalid @ record")
-    {:error, line, msg, type} = result
+    {:error, type, line, msg} = result
+    assert is_atom(type)
     assert is_integer(line)
     assert is_binary(msg)
-    assert is_atom(type)
   end
 
   @fixtures "test/nsd"
@@ -55,25 +55,25 @@ defmodule LDNSTest do
 
     test "detects malformed SOA record" do
       contents = File.read!(Path.join(@invalid_fixtures, "malformed_soa.zone"))
-      assert {:error, 6, msg, :unknown_error} = LDNS.validate(contents)
+      assert {:error, :unknown_error, 6, msg} = LDNS.validate(contents)
       assert msg =~ "value expected"
     end
 
     test "detects invalid TTL" do
       contents = File.read!(Path.join(@invalid_fixtures, "invalid_ttl.zone"))
-      assert {:error, _, msg, :rdata_error} = LDNS.validate(contents)
+      assert {:error, :rdata_error, _, msg} = LDNS.validate(contents)
       assert msg =~ "could not parse"
     end
 
     test "detects invalid class" do
       contents = File.read!(Path.join(@invalid_fixtures, "invalid_class.zone"))
-      assert {:error, _, msg, :rdata_error} = LDNS.validate(contents)
+      assert {:error, :rdata_error, _, msg} = LDNS.validate(contents)
       assert to_string(msg) =~ "could not parse"
     end
 
     test "detects invalid rdata" do
       contents = File.read!(Path.join(@invalid_fixtures, "invalid_rdata.zone"))
-      assert {:error, _, msg, :rdata_error} = LDNS.validate(contents)
+      assert {:error, :rdata_error, _, msg} = LDNS.validate(contents)
       assert to_string(msg) =~ "could not parse"
     end
   end
