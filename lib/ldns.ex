@@ -3,8 +3,6 @@ defmodule LDNS do
   LDNS bindings for Elixir.
   """
 
-  alias LDNS.{Record, Zone}
-
   @on_load :load_nif
 
   def load_nif do
@@ -65,13 +63,7 @@ defmodule LDNS do
       iex> record.data.serial
       1601227221
   """
-  def to_map(binary) do
-    case :erlang.nif_error(:nif_not_loaded) do
-      {:ok, map} ->
-        {:ok, struct(Zone, map)}
-
-      error ->
-        error
-    end
+  def to_map(_binary) do
+    :erlang.nif_error(:nif_not_loaded)
   end
 end
