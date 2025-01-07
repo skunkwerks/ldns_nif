@@ -78,20 +78,17 @@ defmodule LDNSTest do
     end
   end
 
-  describe "to_json/1" do
-    test "converts zone files to JSON format" do
+  describe "to_map" do
+    test "converts zone files to map format" do
       # Get all .zone files in test/json
       zones = Path.wildcard("test/json/*.zone")
 
       for zone <- zones do
         json = String.replace(zone, ".zone", ".json")
 
-        expected = File.read!(json)
-        {:ok, converted} = LDNS.to_json(File.read!(zone))
+        expected = File.read!(json) |> Jason.decode!(keys: :atoms!)
+        {:ok, converted} = LDNS.to_map(File.read!(zone))
         assert expected == converted
-
-        assert {:ok, _decoded} = Jason.decode(converted),
-               "JSON conversion failed for #{Path.basename(zone)}"
       end
     end
   end
