@@ -1,0 +1,133 @@
+{
+ "name": "",
+ "records": [
+  {
+   "name": "",
+   "type": "SOA",
+   "ttl": 3600,
+   "data": {
+    "mname": "ns1.example.com",
+    "rname": "hostmaster.example.com",
+    "serial": 2006120901,
+    "refresh": 43200,
+    "retry": 7200,
+    "expire": 2419200,
+    "minimum": 3600
+   }
+  },
+  {
+   "name": "",
+   "type": "NS",
+   "ttl": 172800,
+   "data": {
+    "dname": "ns1.example.com"
+   }
+  },
+  {
+   "name": "",
+   "type": "NS",
+   "ttl": 172800,
+   "data": {
+    "dname": "ns2.example.com"
+   }
+  },
+  {
+   "name": "",
+   "type": "CNAME",
+   "ttl": 172800,
+   "data": {
+    "dname": "www.example.com"
+   }
+  },
+  {
+   "name": "",
+   "type": "MX",
+   "ttl": 172800,
+   "data": {
+    "preference": 10,
+    "exchange": "mx1.example.com"
+   }
+  },
+  {
+   "name": "",
+   "type": "MX",
+   "ttl": 172800,
+   "data": {
+    "preference": 20,
+    "exchange": "mx2.example.com"
+   }
+  },
+  {
+   "name": "mx1.example.com",
+   "type": "A",
+   "ttl": 172800,
+   "data": {
+    "ip": "1.2.3.7"
+   }
+  },
+  {
+   "name": "mx2.example.com",
+   "type": "A",
+   "ttl": 172800,
+   "data": {
+    "ip": "1.2.3.8"
+   }
+  },
+  {
+   "name": "mx2.example.com",
+   "type": "CNAME",
+   "ttl": 172800,
+   "data": {
+    "dname": "www.example.com"
+   }
+  },
+  {
+   "name": "ns1.example.com",
+   "type": "A",
+   "ttl": 172800,
+   "data": {
+    "ip": "1.2.3.5"
+   }
+  },
+  {
+   "name": "ns2.example.com",
+   "type": "A",
+   "ttl": 172800,
+   "data": {
+    "ip": "1.2.3.6"
+   }
+  },
+  {
+   "name": "order.example.com",
+   "type": "A",
+   "ttl": 172800,
+   "data": {
+    "ip": "1.2.3.4"
+   }
+  },
+  {
+   "name": "order.example.com",
+   "type": "CNAME",
+   "ttl": 172800,
+   "data": {
+    "dname": "www.bla.com"
+   }
+  },
+  {
+   "name": "www.example.com",
+   "type": "CNAME",
+   "ttl": 172800,
+   "data": {
+    "dname": "x.example.com"
+   }
+  },
+  {
+   "name": "x.example.com",
+   "type": "A",
+   "ttl": 172800,
+   "data": {
+    "ip": "1.2.3.4"
+   }
+  }
+ ]
+}

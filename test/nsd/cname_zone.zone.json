@@ -1,0 +1,107 @@
+{
+ "name": "",
+ "records": [
+  {
+   "name": "",
+   "type": "SOA",
+   "ttl": 3600,
+   "data": {
+    "mname": "bla",
+    "rname": "root",
+    "serial": 2003070707,
+    "refresh": 3600,
+    "retry": 28800,
+    "expire": 2419200,
+    "minimum": 3600
+   }
+  },
+  {
+   "name": "",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns0.xname.org"
+   }
+  },
+  {
+   "name": "",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns1.xname.org"
+   }
+  },
+  {
+   "name": "deleg",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns1.ohno.net"
+   }
+  },
+  {
+   "name": "deleg",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns2.ohno.net"
+   }
+  },
+  {
+   "name": "deleg",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns3.ohno.net"
+   }
+  },
+  {
+   "name": "ns1.ohno.net",
+   "type": "A",
+   "ttl": 3600,
+   "data": {
+    "ip": "1.2.3.4"
+   }
+  },
+  {
+   "name": "ns2.ohno.net",
+   "type": "A",
+   "ttl": 3600,
+   "data": {
+    "ip": "1.3.3.4"
+   }
+  },
+  {
+   "name": "ns3.ohno.net",
+   "type": "A",
+   "ttl": 3600,
+   "data": {
+    "ip": "1.4.3.4"
+   }
+  },
+  {
+   "name": "test",
+   "type": "TXT",
+   "ttl": 3600,
+   "data": {
+    "txt": "text record info"
+   }
+  },
+  {
+   "name": "www",
+   "type": "CNAME",
+   "ttl": 3600,
+   "data": {
+    "dname": "www.deleg"
+   }
+  },
+  {
+   "name": "zok",
+   "type": "DNAME",
+   "ttl": 3600,
+   "data": {
+    "dname": "zok.deleg"
+   }
+  }
+ ]
+}

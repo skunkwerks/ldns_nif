@@ -1,0 +1,76 @@
+{
+ "name": "example.net",
+ "records": [
+  {
+   "name": "example.net",
+   "type": "SOA",
+   "ttl": 86400,
+   "data": {
+    "mname": "ns.example.net",
+    "rname": "hostmaster.example.net",
+    "serial": 1,
+    "refresh": 3,
+    "retry": 4,
+    "expire": 3000,
+    "minimum": 5
+   }
+  },
+  {
+   "name": "example.net",
+   "type": "NS",
+   "ttl": 86400,
+   "data": {
+    "dname": "ns.example.net"
+   }
+  },
+  {
+   "name": "example.net",
+   "type": "MX",
+   "ttl": 86400,
+   "data": {
+    "preference": 10,
+    "exchange": "mx.example.net"
+   }
+  },
+  {
+   "name": "mx.example.net",
+   "type": "A",
+   "ttl": 86400,
+   "data": {
+    "ip": "1.2.3.4"
+   }
+  },
+  {
+   "name": "mx.example.net",
+   "type": "AAAA",
+   "ttl": 86400,
+   "data": {
+    "ip": "::1"
+   }
+  },
+  {
+   "name": "ns.example.net",
+   "type": "A",
+   "ttl": 86400,
+   "data": {
+    "ip": "1.2.3.4"
+   }
+  },
+  {
+   "name": "ns.example.net",
+   "type": "AAAA",
+   "ttl": 86400,
+   "data": {
+    "ip": "::1"
+   }
+  },
+  {
+   "name": "www.example.net",
+   "type": "A",
+   "ttl": 86400,
+   "data": {
+    "ip": "1.2.3.4"
+   }
+  }
+ ]
+}

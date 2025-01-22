@@ -1,0 +1,179 @@
+{
+ "name": "",
+ "records": [
+  {
+   "name": "",
+   "type": "SOA",
+   "ttl": 3600,
+   "data": {
+    "mname": "42dbc308.dsl.aros.net",
+    "rname": "drr.aros.net",
+    "serial": 2003070707,
+    "refresh": 3600,
+    "retry": 28800,
+    "expire": 2419200,
+    "minimum": 3600
+   }
+  },
+  {
+   "name": "abram",
+   "type": "LOC",
+   "ttl": 3600,
+   "data": {
+    "size": "40 32 24.716 N 105 04 25.770 W 42849672.91m 1000m 500000m 2000m"
+   }
+  },
+  {
+   "name": "addie",
+   "type": "LOC",
+   "ttl": 3600,
+   "data": {
+    "size": "90 00 0.000 S 180 00 0.000 E 42849672.91m 9000000m 9000000m 9000000m"
+   }
+  },
+  {
+   "name": "addie",
+   "type": "LOC",
+   "ttl": 3600,
+   "data": {
+    "size": "90 00 0.000 S 180 00 0.000 E 42849672.91m 90000000m 90000000m 80000000m"
+   }
+  },
+  {
+   "name": "example.com",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns0.xname.org"
+   }
+  },
+  {
+   "name": "example.com",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns1.xname.org"
+   }
+  },
+  {
+   "name": "abbey.example.com",
+   "type": "A",
+   "ttl": 3600,
+   "data": {
+    "ip": "200.0.0.2"
+   }
+  },
+  {
+   "name": "abbey.example.com",
+   "type": "LOC",
+   "ttl": 3600,
+   "data": {
+    "size": "40 32 24.716 N 105 04 25.770 W 1208m 600000m 2000m 10m"
+   }
+  },
+  {
+   "name": "alfrac.example.com",
+   "type": "LOC",
+   "ttl": 3600,
+   "data": {
+    "size": "40 00 0.000 N 105 00 0.000 W 1208.64m 1m 10000m 10m"
+   }
+  },
+  {
+   "name": "allspec.example.com",
+   "type": "LOC",
+   "ttl": 3600,
+   "data": {
+    "size": "40 32 24.716 N 105 04 25.770 W 1208m 600000m 2000m 20m"
+   }
+  },
+  {
+   "name": "curtin.edu.au.example.com",
+   "type": "LOC",
+   "ttl": 3600,
+   "data": {
+    "size": "32 07 19.000 S 116 02 25.000 E 10m 1m 10000m 10m"
+   }
+  },
+  {
+   "name": "rwy04l.logan-airport.boston.example.com",
+   "type": "LOC",
+   "ttl": 3600,
+   "data": {
+    "size": "42 21 28.764 N 71 00 51.617 W -44m 2000m 10000m 10m"
+   }
+  },
+  {
+   "name": "cambridge-net.kei.com.example.com",
+   "type": "LOC",
+   "ttl": 3600,
+   "data": {
+    "size": "42 21 54.000 N 71 06 18.000 W -24m 30m 10000m 10m"
+   }
+  },
+  {
+   "name": "loiosh.kei.com.example.com",
+   "type": "LOC",
+   "ttl": 3600,
+   "data": {
+    "size": "42 21 43.952 N 71 05 6.344 W -24m 1m 200m 10m"
+   }
+  },
+  {
+   "name": "morefrac.example.com",
+   "type": "LOC",
+   "ttl": 3600,
+   "data": {
+    "size": "40 00 0.000 N 105 00 0.000 W 1208.64m 0.30m 5m 4m"
+   }
+  },
+  {
+   "name": "negative.example.com",
+   "type": "LOC",
+   "ttl": 3600,
+   "data": {
+    "size": "40 00 0.000 S 105 00 0.000 E -9978.85m 1m 10000m 10m"
+   }
+  },
+  {
+   "name": "pipex.net.example.com",
+   "type": "LOC",
+   "ttl": 3600,
+   "data": {
+    "size": "52 14 5.000 N 00 08 50.000 E 10m 1m 10000m 10m"
+   }
+  },
+  {
+   "name": "nohpvp.example.com",
+   "type": "LOC",
+   "ttl": 3600,
+   "data": {
+    "size": "40 32 24.716 N 105 04 25.770 W 1208m 600000m 10000m 10m"
+   }
+  },
+  {
+   "name": "nominnosec.example.com",
+   "type": "LOC",
+   "ttl": 3600,
+   "data": {
+    "size": "40 00 0.000 N 105 00 0.000 W 1208m 1m 10000m 10m"
+   }
+  },
+  {
+   "name": "nosec.example.com",
+   "type": "LOC",
+   "ttl": 3600,
+   "data": {
+    "size": "40 32 0.000 N 105 04 0.000 W 1208m 1m 10000m 10m"
+   }
+  },
+  {
+   "name": "noszhpvp.example.com",
+   "type": "LOC",
+   "ttl": 3600,
+   "data": {
+    "size": "40 32 24.716 N 105 04 25.770 W 1208m 1m 10000m 10m"
+   }
+  }
+ ]
+}

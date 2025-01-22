@@ -1,0 +1,19 @@
+{
+ "name": "example.com",
+ "records": [
+  {
+   "name": "example.com",
+   "type": "SOA",
+   "ttl": 86400,
+   "data": {
+    "mname": "dns.denic.de",
+    "rname": "ops.denic.de",
+    "serial": 2002031701,
+    "refresh": 10800,
+    "retry": 7200,
+    "expire": 36000,
+    "minimum": 3600
+   }
+  }
+ ]
+}

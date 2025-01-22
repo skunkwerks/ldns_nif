@@ -1,0 +1,59 @@
+{
+ "name": "example.nl",
+ "records": [
+  {
+   "name": "example.nl",
+   "type": "SOA",
+   "ttl": 3600,
+   "data": {
+    "mname": "bla.example.nl",
+    "rname": "root.example.nl",
+    "serial": 2003070707,
+    "refresh": 3600,
+    "retry": 28800,
+    "expire": 2419200,
+    "minimum": 3600
+   }
+  },
+  {
+   "name": "example.nl",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns0.xname.org"
+   }
+  },
+  {
+   "name": "example.nl",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns1.xname.org"
+   }
+  },
+  {
+   "name": "localhost.example.nl",
+   "type": "A",
+   "ttl": 3600,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "\\128\\129\\130.example.nl",
+   "type": "A",
+   "ttl": 3600,
+   "data": {
+    "ip": "127.0.0.2"
+   }
+  },
+  {
+   "name": "\\200\\201\\202\\203\\204\\205\\206\\207\\208\\209\\210.example.nl",
+   "type": "A",
+   "ttl": 3600,
+   "data": {
+    "ip": "127.0.0.2"
+   }
+  }
+ ]
+}

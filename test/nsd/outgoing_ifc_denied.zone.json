@@ -1,0 +1,35 @@
+{
+ "name": "",
+ "records": [
+  {
+   "name": "",
+   "type": "SOA",
+   "ttl": 3600,
+   "data": {
+    "mname": "vergon6.example.com",
+    "rname": "leela.example.com",
+    "serial": 2009093001,
+    "refresh": 3600,
+    "retry": 28800,
+    "expire": 1209600,
+    "minimum": 3600
+   }
+  },
+  {
+   "name": "nibbler.example.com",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns0.vergon6.example.com"
+   }
+  },
+  {
+   "name": "nibbler.example.com",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns1.vergon6.example.com"
+   }
+  }
+ ]
+}

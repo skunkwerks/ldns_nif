@@ -1,0 +1,51 @@
+{
+ "name": "example.com",
+ "records": [
+  {
+   "name": "example.com",
+   "type": "SOA",
+   "ttl": 3600,
+   "data": {
+    "mname": "ns1.example.com",
+    "rname": "admin.example.com",
+    "serial": 2023121901,
+    "refresh": 3600,
+    "retry": 1800,
+    "expire": 604800,
+    "minimum": 3600
+   }
+  },
+  {
+   "name": "example.com",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns1.example.com"
+   }
+  },
+  {
+   "name": "example.com",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns2.example.com"
+   }
+  },
+  {
+   "name": "www.example.com",
+   "type": "A",
+   "ttl": 3600,
+   "data": {
+    "ip": "192.0.2.1"
+   }
+  },
+  {
+   "name": "mail.example.com",
+   "type": "A",
+   "ttl": 3600,
+   "data": {
+    "ip": "192.0.2.2"
+   }
+  }
+ ]
+}

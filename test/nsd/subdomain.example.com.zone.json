@@ -1,0 +1,43 @@
+{
+ "name": "",
+ "records": [
+  {
+   "name": "",
+   "type": "SOA",
+   "ttl": 3600,
+   "data": {
+    "mname": "ns.com.com",
+    "rname": "hostmaster",
+    "serial": 2011071300,
+    "refresh": 1800,
+    "retry": 900,
+    "expire": 604800,
+    "minimum": 86400
+   }
+  },
+  {
+   "name": "",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns.foo.com"
+   }
+  },
+  {
+   "name": "",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns2.foo.com"
+   }
+  },
+  {
+   "name": "subdomain.example.com",
+   "type": "A",
+   "ttl": 3600,
+   "data": {
+    "ip": "10.0.0.2"
+   }
+  }
+ ]
+}

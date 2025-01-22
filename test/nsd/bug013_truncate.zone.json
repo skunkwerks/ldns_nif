@@ -1,0 +1,725 @@
+{
+ "name": "miek.nl",
+ "records": [
+  {
+   "name": "miek.nl",
+   "type": "SOA",
+   "ttl": 14400,
+   "data": {
+    "mname": "open.nlnetlabs.nl",
+    "rname": "miekg.atoom.net",
+    "serial": 2005061300,
+    "refresh": 14400,
+    "retry": 3600,
+    "expire": 604800,
+    "minimum": 86400
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "80.127.17.126"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "NS",
+   "ttl": 14400,
+   "data": {
+    "dname": "open.nlnetlabs.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "NS",
+   "ttl": 14400,
+   "data": {
+    "dname": "omval.tednet.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "NS",
+   "ttl": 14400,
+   "data": {
+    "dname": "elektron.atoom.net"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx1.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx2.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx3.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx4.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx5.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx6.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx7.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx8.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx9.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx10.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx11.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx12.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx13.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx14.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx15.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx15.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx16.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx17.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx18.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx19.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx20.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx21.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx22.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx23.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx24.miek.nl"
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "MX",
+   "ttl": 14400,
+   "data": {
+    "preference": 20,
+    "exchange": "mx25.miek.nl"
+   }
+  },
+  {
+   "name": "a.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "80.127.17.126"
+   }
+  },
+  {
+   "name": "localhost.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx1.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx1.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx10.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx10.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx11.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx11.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx12.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx12.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx13.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx13.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx14.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx14.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx15.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx15.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx16.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx16.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx17.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx17.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx18.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx18.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx19.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx19.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx2.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx2.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx20.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx20.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx20.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx20.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx21.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx21.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx22.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx22.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx23.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx23.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx24.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx24.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx25.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx25.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx3.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx3.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx4.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx4.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx5.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx5.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx6.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx6.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx7.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx7.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx8.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx8.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "mx9.miek.nl",
+   "type": "A",
+   "ttl": 14400,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "mx9.miek.nl",
+   "type": "AAAA",
+   "ttl": 14400,
+   "data": {
+    "ip": "::ffff:127.0.0.1"
+   }
+  },
+  {
+   "name": "www.miek.nl",
+   "type": "CNAME",
+   "ttl": 14400,
+   "data": {
+    "dname": "a.miek.nl"
+   }
+  }
+ ]
+}

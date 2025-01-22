@@ -1,0 +1,35 @@
+{
+ "name": "",
+ "records": [
+  {
+   "name": "",
+   "type": "SOA",
+   "ttl": 3600,
+   "data": {
+    "mname": "nibbler.futurama.com",
+    "rname": "mattgroening.futurama.com",
+    "serial": 1,
+    "refresh": 3600,
+    "retry": 28800,
+    "expire": 2419200,
+    "minimum": 3600
+   }
+  },
+  {
+   "name": "futurama.com",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns1.futurama.org"
+   }
+  },
+  {
+   "name": "futurama.com",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns1.futurama.org"
+   }
+  }
+ ]
+}

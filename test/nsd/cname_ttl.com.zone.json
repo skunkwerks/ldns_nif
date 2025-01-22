@@ -1,0 +1,43 @@
+{
+ "name": "example.com",
+ "records": [
+  {
+   "name": "example.com",
+   "type": "SOA",
+   "ttl": 345600,
+   "data": {
+    "mname": "nibbler.example.net",
+    "rname": "leela.example.net",
+    "serial": 1,
+    "refresh": 3,
+    "retry": 4,
+    "expire": 3000,
+    "minimum": 5
+   }
+  },
+  {
+   "name": "example.com",
+   "type": "NS",
+   "ttl": 345600,
+   "data": {
+    "dname": "ns1.example.com"
+   }
+  },
+  {
+   "name": "hostname.example.com",
+   "type": "A",
+   "ttl": 345600,
+   "data": {
+    "ip": "1.2.3.4"
+   }
+  },
+  {
+   "name": "www.example.com",
+   "type": "CNAME",
+   "ttl": 345600,
+   "data": {
+    "dname": "hostname.example.com"
+   }
+  }
+ ]
+}

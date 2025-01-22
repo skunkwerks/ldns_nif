@@ -86,7 +86,7 @@ defmodule LDNSTest do
       for zone <- zones do
         json = String.replace(zone, ".zone", ".json")
 
-        expected = File.read!(json) |> Jason.decode!(keys: :atoms!)
+        expected = File.read!(json) |> Jason.decode!()
         {:ok, converted} = LDNS.to_map(File.read!(zone))
         assert expected == converted
       end

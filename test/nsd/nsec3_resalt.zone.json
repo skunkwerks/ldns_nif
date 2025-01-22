@@ -1,0 +1,131 @@
+{
+ "name": "example.net",
+ "records": [
+  {
+   "name": "example.net",
+   "type": "SOA",
+   "ttl": 345600,
+   "data": {
+    "mname": "nibbler.example.net",
+    "rname": "leela.example.net",
+    "serial": 1,
+    "refresh": 3,
+    "retry": 4,
+    "expire": 3000,
+    "minimum": 5
+   }
+  },
+  {
+   "name": "example.net",
+   "type": "NS",
+   "ttl": 345600,
+   "data": {
+    "dname": "ns.deg1.example.net"
+   }
+  },
+  {
+   "name": "*.example.net",
+   "type": "A",
+   "ttl": 345600,
+   "data": {
+    "ip": "10.1.2.4"
+   }
+  },
+  {
+   "name": "deg1.example.net",
+   "type": "NS",
+   "ttl": 345600,
+   "data": {
+    "dname": "ns.deg1.example.net"
+   }
+  },
+  {
+   "name": "ns.deg1.example.net",
+   "type": "A",
+   "ttl": 345600,
+   "data": {
+    "ip": "10.1.2.3"
+   }
+  },
+  {
+   "name": "deg2.example.net",
+   "type": "NS",
+   "ttl": 345600,
+   "data": {
+    "dname": "ns.deg2.example.net"
+   }
+  },
+  {
+   "name": "ns.deg2.example.net",
+   "type": "A",
+   "ttl": 345600,
+   "data": {
+    "ip": "10.1.2.3"
+   }
+  },
+  {
+   "name": "deg3.example.net",
+   "type": "NS",
+   "ttl": 345600,
+   "data": {
+    "dname": "ns.deg3.example.net"
+   }
+  },
+  {
+   "name": "ns.deg3.example.net",
+   "type": "A",
+   "ttl": 345600,
+   "data": {
+    "ip": "10.1.2.3"
+   }
+  },
+  {
+   "name": "deg4.example.net",
+   "type": "NS",
+   "ttl": 345600,
+   "data": {
+    "dname": "ns.deg4.example.net"
+   }
+  },
+  {
+   "name": "ns.deg4.example.net",
+   "type": "A",
+   "ttl": 345600,
+   "data": {
+    "ip": "10.1.2.3"
+   }
+  },
+  {
+   "name": "deg5.example.net",
+   "type": "NS",
+   "ttl": 345600,
+   "data": {
+    "dname": "ns.deg5.example.net"
+   }
+  },
+  {
+   "name": "ns.deg5.example.net",
+   "type": "A",
+   "ttl": 345600,
+   "data": {
+    "ip": "10.1.2.3"
+   }
+  },
+  {
+   "name": "deg6.example.net",
+   "type": "NS",
+   "ttl": 345600,
+   "data": {
+    "dname": "ns.deg6.example.net"
+   }
+  },
+  {
+   "name": "ns.deg6.example.net",
+   "type": "A",
+   "ttl": 345600,
+   "data": {
+    "ip": "10.1.2.3"
+   }
+  }
+ ]
+}

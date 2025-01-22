@@ -1,0 +1,35 @@
+{
+ "name": "",
+ "records": [
+  {
+   "name": "",
+   "type": "SOA",
+   "ttl": 345600,
+   "data": {
+    "mname": "nibbler.example.net",
+    "rname": "leela.example.net",
+    "serial": 1,
+    "refresh": 3,
+    "retry": 4,
+    "expire": 3000,
+    "minimum": 5
+   }
+  },
+  {
+   "name": "",
+   "type": "A",
+   "ttl": 345600,
+   "data": {
+    "ip": "192.0.2.1"
+   }
+  },
+  {
+   "name": "www",
+   "type": "A",
+   "ttl": 345600,
+   "data": {
+    "ip": "192.0.2.1"
+   }
+  }
+ ]
+}

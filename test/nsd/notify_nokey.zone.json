@@ -1,0 +1,35 @@
+{
+ "name": "",
+ "records": [
+  {
+   "name": "",
+   "type": "SOA",
+   "ttl": 3600,
+   "data": {
+    "mname": "42dbc308.dsl.aros.net",
+    "rname": "drr.aros.net",
+    "serial": 2003070707,
+    "refresh": 3600,
+    "retry": 28800,
+    "expire": 2419200,
+    "minimum": 3600
+   }
+  },
+  {
+   "name": "example.com",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns0.xname.org"
+   }
+  },
+  {
+   "name": "example.com",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns1.xname.org"
+   }
+  }
+ ]
+}

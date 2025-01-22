@@ -1,0 +1,35 @@
+{
+ "name": "",
+ "records": [
+  {
+   "name": "",
+   "type": "SOA",
+   "ttl": 3600,
+   "data": {
+    "mname": "example.net",
+    "rname": "hostmaster.example.net",
+    "serial": 2003070707,
+    "refresh": 3600,
+    "retry": 28800,
+    "expire": 2419200,
+    "minimum": 3600
+   }
+  },
+  {
+   "name": "",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns0.somewhere.here"
+   }
+  },
+  {
+   "name": "",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns1.somewhere.here"
+   }
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "name": "example.net",
+ "records": [
+  {
+   "name": "example.net",
+   "type": "SOA",
+   "ttl": 3600,
+   "data": {
+    "mname": "nibbler.example.net",
+    "rname": "leela.example.net",
+    "serial": 1,
+    "refresh": 2000,
+    "retry": 3000,
+    "expire": 4000,
+    "minimum": 5000
+   }
+  }
+ ]
+}

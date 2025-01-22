@@ -1,0 +1,83 @@
+{
+ "name": "dnssec",
+ "records": [
+  {
+   "name": "dnssec",
+   "type": "SOA",
+   "ttl": 3600,
+   "data": {
+    "mname": "dnssec",
+    "rname": "admin.dnssec",
+    "serial": 2004120901,
+    "refresh": 21600,
+    "retry": 7200,
+    "expire": 604800,
+    "minimum": 3600
+   }
+  },
+  {
+   "name": "dnssec",
+   "type": "A",
+   "ttl": 3600,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "dnssec",
+   "type": "NS",
+   "ttl": 3600,
+   "data": {
+    "dname": "ns.dnssec"
+   }
+  },
+  {
+   "name": "dnssec",
+   "type": "RRSIG",
+   "ttl": 3600,
+   "data": {
+    "type_covered": "A",
+    "alg": "1",
+    "labels": 1,
+    "original_ttl": 3600,
+    "expiration": "20050108142256",
+    "inception": "20041209142256",
+    "key_tag": 25294,
+    "signers_name": "dnssec",
+    "signature": "dukS7Rw05gRu67NswMTOhUT1xSi5YkxmC1Yx26JKdO7CWRIWjvANW9dy3h7I4MGUWkb3MISTvecTgPcktpdVuQ=="
+   }
+  },
+  {
+   "name": "dnssec",
+   "type": "RRSIG",
+   "ttl": 3600,
+   "data": {
+    "type_covered": "NS",
+    "alg": "1",
+    "labels": 1,
+    "original_ttl": 3600,
+    "expiration": "20050108142256",
+    "inception": "20041209142256",
+    "key_tag": 25294,
+    "signers_name": "dnssec",
+    "signature": "tuikgzRDd8xEdmr1W0k0eo6sAlSqhhlNIn/fksld4w9C9SC/B/WR1RP1m/c4pZ1fXEimi0IorllFZpptJU6vRQ=="
+   }
+  },
+  {
+   "name": "dnssec",
+   "type": "RRSIG",
+   "ttl": 3600,
+   "data": {
+    "type_covered": "SOA",
+    "alg": "1",
+    "labels": 1,
+    "original_ttl": 3600,
+    "expiration": "20050108142256",
+    "inception": "20041209142256",
+    "key_tag": 25294,
+    "signers_name": "dnssec",
+    "signature": "OhPPWZeqtcNBznhkpn2YO7cncHF0PhxhTcrZhG3ZrIsX/PFOYHkA3lJPZX9lzTLlrxqeFVFb60641NNKUiq4Aw=="
+   }
+  }
+ ]
+}

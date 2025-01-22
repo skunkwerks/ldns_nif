@@ -1,0 +1,59 @@
+{
+ "name": "example.net",
+ "records": [
+  {
+   "name": "example.net",
+   "type": "SOA",
+   "ttl": 345600,
+   "data": {
+    "mname": "nibbler.example.net",
+    "rname": "leela.example.net",
+    "serial": 1,
+    "refresh": 300,
+    "retry": 300,
+    "expire": 300,
+    "minimum": 300
+   }
+  },
+  {
+   "name": "sub.example.net",
+   "type": "NS",
+   "ttl": 345600,
+   "data": {
+    "dname": "ns1.sub.example.net"
+   }
+  },
+  {
+   "name": "sub.example.net",
+   "type": "NS",
+   "ttl": 345600,
+   "data": {
+    "dname": "ns2.sub.example.net"
+   }
+  },
+  {
+   "name": "ns1.sub.example.net",
+   "type": "A",
+   "ttl": 345600,
+   "data": {
+    "ip": "1.2.3.5"
+   }
+  },
+  {
+   "name": "ns2.sub.example.net",
+   "type": "A",
+   "ttl": 345600,
+   "data": {
+    "ip": "1.2.3.6"
+   }
+  },
+  {
+   "name": "www.example.net",
+   "type": "A",
+   "ttl": 345600,
+   "data": {
+    "ip": "1.2.3.4"
+   }
+  }
+ ]
+}

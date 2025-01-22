@@ -1,0 +1,52 @@
+{
+ "name": "miek.nl",
+ "records": [
+  {
+   "name": "miek.nl",
+   "type": "SOA",
+   "ttl": 345600,
+   "data": {
+    "mname": "open.nlnetlabs.nl",
+    "rname": "miekg.atoom.net",
+    "serial": 2005061300,
+    "refresh": 14400,
+    "retry": 3600,
+    "expire": 604800,
+    "minimum": 86400
+   }
+  },
+  {
+   "name": "miek.nl",
+   "type": "NS",
+   "ttl": 345600,
+   "data": {
+    "dname": "open.nlnetlabs.nl"
+   }
+  },
+  {
+   "name": "node.miek.nl",
+   "type": "A",
+   "ttl": 345600,
+   "data": {
+    "ip": "127.0.0.1"
+   }
+  },
+  {
+   "name": "node2.miek.nl",
+   "type": "TXT",
+   "ttl": 345600,
+   "data": {
+    "txt": "text record"
+   }
+  },
+  {
+   "name": "node3.miek.nl",
+   "type": "MX",
+   "ttl": 345600,
+   "data": {
+    "preference": 20,
+    "exchange": "open.nlnetlabs.nl"
+   }
+  }
+ ]
+}
