@@ -32,7 +32,7 @@ static ERL_NIF_TERM validate(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]
     }
 
     status = ldns_zone_new_frm_fp_l(&zone, fp, NULL, 0, LDNS_RR_CLASS_IN, &line_nr);
-    
+
     ERL_NIF_TERM result;
     if (status != LDNS_STATUS_OK) {
         const char* error_str = ldns_get_errorstr_by_id(status);
@@ -47,7 +47,7 @@ static ERL_NIF_TERM validate(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]
         }
 
         memcpy(error_bin.data, error_str, error_len);
-        
+
         const char* status_str;
         switch (status) {
             case LDNS_STATUS_SYNTAX_ERR:
@@ -63,9 +63,9 @@ static ERL_NIF_TERM validate(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]
 
         result = enif_make_tuple4(env,
             enif_make_atom(env, "error"),
+            enif_make_atom(env, status_str),
             enif_make_int(env, line_nr),
-            enif_make_binary(env, &error_bin),
-            enif_make_atom(env, status_str));
+            enif_make_binary(env, &error_bin));
     } else {
         result = enif_make_atom(env, "ok");
     }
