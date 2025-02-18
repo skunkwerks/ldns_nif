@@ -8,8 +8,9 @@ defmodule LDNS.MixProject do
       elixir: "~> 1.18",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      compilers: compilers(Mix.env()),
+      compilers: compilers(),
       make_env: %{"MIX_ENV" => to_string(Mix.env())},
+      make_executable: "make",
       make_clean: ["clean"]
     ]
   end
@@ -28,7 +29,7 @@ defmodule LDNS.MixProject do
     ]
   end
 
-  defp compilers(_) do
+  defp compilers() do
     [:elixir_make] ++ Mix.compilers()
   end
 end

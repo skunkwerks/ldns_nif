@@ -32,49 +32,52 @@ static ERL_NIF_TERM validate(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]
     }
 
     status = ldns_zone_new_frm_fp_l(&zone, fp, NULL, 0, LDNS_RR_CLASS_IN, &line_nr);
-
-    fclose(fp);
-    enif_free(zone_str);
-
+    
+    ERL_NIF_TERM result;
     if (status != LDNS_STATUS_OK) {
         const char* error_str = ldns_get_errorstr_by_id(status);
-        // Convert status code to a descriptive atom
+        unsigned error_len = strlen(error_str);
+        ErlNifBinary error_bin;
+
+        if (!enif_alloc_binary(error_len, &error_bin)) {
+            result = enif_make_tuple2(env,
+                enif_make_atom(env, "error"),
+                enif_make_atom(env, "memory_error"));
+            goto cleanup;
+        }
+
+        memcpy(error_bin.data, error_str, error_len);
+        
         const char* status_str;
         switch (status) {
             case LDNS_STATUS_SYNTAX_ERR:
-                status_str = "syntax_error";
-                break;
-            case LDNS_STATUS_INVALID_INT:
-                status_str = "invalid_int";
-                break;
-            case LDNS_STATUS_ERR:
-                status_str = "general_error";
-                break;
             case LDNS_STATUS_SYNTAX_TTL:
-                status_str = "ttl_error";
-                break;
-            case LDNS_STATUS_SYNTAX_RDATA_ERR:
-                status_str = "rdata_error";
-                break;
             case LDNS_STATUS_SYNTAX_DNAME_ERR:
-                status_str = "dname_error";
+            case LDNS_STATUS_SYNTAX_RDATA_ERR:
+            case LDNS_STATUS_INVALID_INT:
+                status_str = "rdata_error";
                 break;
             default:
                 status_str = "unknown_error";
         }
 
-        return enif_make_tuple4(env,
+        result = enif_make_tuple4(env,
             enif_make_atom(env, "error"),
             enif_make_int(env, line_nr),
-            enif_make_string(env, error_str, ERL_NIF_LATIN1),
+            enif_make_binary(env, &error_bin),
             enif_make_atom(env, status_str));
+    } else {
+        result = enif_make_atom(env, "ok");
     }
 
+cleanup:
     if (zone) {
         ldns_zone_free(zone);
     }
+    fclose(fp);
+    enif_free(zone_str);
 
-    return enif_make_atom(env, "ok");
+    return result;
 }
 
 static ErlNifFunc nif_funcs[] = {
