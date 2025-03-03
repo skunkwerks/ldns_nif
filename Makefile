@@ -3,8 +3,8 @@
 PRIV_DIR = ${MIX_APP_PATH}/priv
 NIF_SO = ${PRIV_DIR}/ldns_nif.so
 
-CFLAGS = -g -O3 -std=c99 -fPIC -pedantic -Wall -Wextra -I${ERTS_INCLUDE_DIR} -I/usr/local/include
-LDFLAGS = -shared -L/usr/local/lib -lldns
+CFLAGS = -g -O3 -std=c11 -fPIC -pedantic -Wall -Wextra -I${ERTS_INCLUDE_DIR} -I/usr/local/include
+LDFLAGS = -shared -L/usr/local/lib -lldns -lc
 
 all: ${NIF_SO}
 
