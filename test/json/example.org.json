@@ -262,7 +262,7 @@
       "ttl": 86400,
       "data": {
         "alg": 4,
-        "fp_type": 2,
+        "fptype": 2,
         "fp": "45058233ea271b6ddb4a8533f371d951f211ff605c8a99207f2f1ecb98137f5a"
       }
     },

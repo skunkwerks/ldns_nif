@@ -108,7 +108,7 @@ defmodule LDNS do
     "SRV" => ~w(priority weight port target),
     "NAPTR" => ~w(order preference flags service regexp replacement),
     "DS" => ~w(key_tag algorithm digest_type digest),
-    "SSHFP" => ~w(alg fp_type fp),
+    "SSHFP" => ~w(alg fptype fp),
     "RRSIG" =>
       ~w(type_covered alg labels original_ttl expiration inception key_tag signers_name signature),
     "NSEC" => ~w(next_domain types),

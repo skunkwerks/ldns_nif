@@ -230,7 +230,7 @@ make_rr_data(ErlNifEnv *env, ldns_rr *rr, ERL_NIF_TERM *out)
 	case LDNS_RR_TYPE_SSHFP: {
 		ERL_NIF_TERM keys[] = {
 		    enif_make_atom(env, "alg"),
-		    enif_make_atom(env, "fp_type"),
+		    enif_make_atom(env, "fptype"),
 		    enif_make_atom(env, "fp"),
 		};
 		ERL_NIF_TERM vals[] = {
