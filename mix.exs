@@ -5,12 +5,13 @@ defmodule LDNS.MixProject do
     [
       app: :ldns,
       version: "0.1.0",
-      elixir: "~> 1.18",
+      elixir: "~> 1.20",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       compilers: compilers(),
       make_env: %{"MIX_ENV" => to_string(Mix.env())},
       make_executable: "make",
+      make_cwd: "c_src",
       make_clean: ["clean"]
     ]
   end
