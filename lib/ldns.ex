@@ -98,6 +98,66 @@ defmodule LDNS do
     Jason.encode!(order_zone(map), pretty: true) <> "\n"
   end
 
+  @doc """
+  Converts a JSON zone string to zone file format.
+
+  Takes a JSON string (as produced by `to_json/1`) and returns `{:ok, zone}`
+  where `zone` is a valid zone file string, or `{:error, reason}` on failure.
+
+  The output is validated using `LDNS.validate/1` before returning.
+
+  ## Examples
+
+      iex> json = LDNS.to_json!("example.org. 86400 IN SOA ns.cabal5.net. root.example.org. 1601227221 86400 7200 3600000 1750")
+      iex> {:ok, zone} = LDNS.to_zone(json)
+      iex> zone =~ "example.org."
+      true
+
+  """
+  def to_zone(json) when is_binary(json) do
+    with {:ok, %{"records" => records}} <- Jason.decode(json),
+         {:ok, lines} <- records_to_lines(records),
+         zone = lines |> Enum.join("\n") |> ensure_trailing_newline(),
+         :ok <- validate(zone) do
+      {:ok, zone}
+    else
+      {:ok, _} -> {:error, :invalid_json, "JSON must contain a 'records' key"}
+      {:error, %Jason.DecodeError{} = err} -> {:error, :invalid_json, Exception.message(err)}
+      error -> error
+    end
+  end
+
+  defp records_to_lines(records) do
+    Enum.reduce_while(records, {:ok, []}, fn rec, {:ok, acc} ->
+      case LDNS.RR.to_line(rec) do
+        {:ok, line} -> {:cont, {:ok, [line | acc]}}
+        {:error, _, _} = err -> {:halt, err}
+      end
+    end)
+    |> case do
+      {:ok, lines} -> {:ok, Enum.reverse(lines)}
+      error -> error
+    end
+  end
+
+  @doc """
+  Converts a JSON zone string to zone file format, raising on error.
+
+  ## Examples
+
+      iex> json = LDNS.to_json!("example.org. 86400 IN SOA ns.cabal5.net. root.example.org. 1601227221 86400 7200 3600000 1750")
+      iex> zone = LDNS.to_zone!(json)
+      iex> zone =~ "example.org."
+      true
+
+  """
+  def to_zone!(json) when is_binary(json) do
+    case to_zone(json) do
+      {:ok, zone} -> zone
+      {:error, type, msg} -> raise "to_zone failed (#{type}): #{msg}"
+    end
+  end
+
   @data_key_order %{
     "SOA" => ~w(mname rname serial refresh retry expire minimum),
     "A" => ~w(ip),
