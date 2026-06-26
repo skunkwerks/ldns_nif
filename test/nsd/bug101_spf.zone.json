@@ -1,0 +1,101 @@
+{
+  "name": "spf-test.nl",
+  "records": [
+    {
+      "name": "spf-test.nl",
+      "type": "SOA",
+      "ttl": 345600,
+      "data": {
+        "mname": "open.nlnetlabs.nl",
+        "rname": "miekg.atoom.net",
+        "serial": 2005061300,
+        "refresh": 14400,
+        "retry": 3600,
+        "expire": 604800,
+        "minimum": 86400
+      }
+    },
+    {
+      "name": "spf-test.nl",
+      "type": "NS",
+      "ttl": 345600,
+      "data": {
+        "dname": "open.nlnetlabs.nl"
+      }
+    },
+    {
+      "name": "spf-test.nl",
+      "type": "MX",
+      "ttl": 345600,
+      "data": {
+        "preference": 20,
+        "exchange": "sol.nlnetlabs.nl"
+      }
+    },
+    {
+      "name": "spf-test.nl",
+      "type": "MX",
+      "ttl": 345600,
+      "data": {
+        "preference": 20,
+        "exchange": "mail.atoom.net"
+      }
+    },
+    {
+      "name": "spf-test.nl",
+      "type": "SPF",
+      "ttl": 345600,
+      "data": {
+        "txt": "v=spf1 a -all"
+      }
+    },
+    {
+      "name": "spf-test.nl",
+      "type": "SPF",
+      "ttl": 345600,
+      "data": {
+        "txt": "v=spf1 +mx a:colo.example.com/28 -all"
+      }
+    },
+    {
+      "name": "a.spf-test.nl",
+      "type": "A",
+      "ttl": 345600,
+      "data": {
+        "ip": "80.127.17.126"
+      }
+    },
+    {
+      "name": "spf-test1.spf-test.nl",
+      "type": "SPF",
+      "ttl": 345600,
+      "data": {
+        "txt": "v=spf1 +mx a:colo.example.com/28 -all"
+      }
+    },
+    {
+      "name": "spf-test2.spf-test.nl",
+      "type": "SPF",
+      "ttl": 345600,
+      "data": {
+        "txt": "v=spf1 a -all"
+      }
+    },
+    {
+      "name": "txt-test1.spf-test.nl",
+      "type": "TXT",
+      "ttl": 345600,
+      "data": {
+        "txt": "v=spf1 +mx a:colo.example.com/28 -all"
+      }
+    },
+    {
+      "name": "www.spf-test.nl",
+      "type": "CNAME",
+      "ttl": 345600,
+      "data": {
+        "dname": "a.spf-test.nl"
+      }
+    }
+  ]
+}

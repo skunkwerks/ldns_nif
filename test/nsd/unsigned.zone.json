@@ -1,0 +1,181 @@
+{
+  "name": "example.org",
+  "records": [
+    {
+      "name": "example.org",
+      "type": "SOA",
+      "ttl": 86400,
+      "data": {
+        "mname": "a.ns.example.org",
+        "rname": "hostmaster.example.org",
+        "serial": 2011030200,
+        "refresh": 1800,
+        "retry": 900,
+        "expire": 604800,
+        "minimum": 86400
+      }
+    },
+    {
+      "name": "example.org",
+      "type": "NS",
+      "ttl": 86400,
+      "data": {
+        "dname": "a.ns.example.org"
+      }
+    },
+    {
+      "name": "data.a.b.c.example.org",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "1.6.8.8"
+      }
+    },
+    {
+      "name": "cname.example.org",
+      "type": "CNAME",
+      "ttl": 3600,
+      "data": {
+        "dname": "www.example.org"
+      }
+    },
+    {
+      "name": "dname.example.org",
+      "type": "TXT",
+      "ttl": 3600,
+      "data": {
+        "txt": "explanationforalias"
+      }
+    },
+    {
+      "name": "dname.example.org",
+      "type": "DNAME",
+      "ttl": 3600,
+      "data": {
+        "dname": "destination.to.the.example.com"
+      }
+    },
+    {
+      "name": "mx.example.org",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "1.5.8.9"
+      }
+    },
+    {
+      "name": "a.ns.example.org",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "1.2.3.53"
+      }
+    },
+    {
+      "name": "a.ns.example.org",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "1.2.3.54"
+      }
+    },
+    {
+      "name": "a.ns.example.org",
+      "type": "AAAA",
+      "ttl": 3600,
+      "data": {
+        "ip": "1::53"
+      }
+    },
+    {
+      "name": "sub.example.org",
+      "type": "NS",
+      "ttl": 3600,
+      "data": {
+        "dname": "ns.sub.example.org"
+      }
+    },
+    {
+      "name": "sub.example.org",
+      "type": "NS",
+      "ttl": 3600,
+      "data": {
+        "dname": "ns2.sub.example.org"
+      }
+    },
+    {
+      "name": "ns.sub.example.org",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "2.2.2.2"
+      }
+    },
+    {
+      "name": "ns2.sub.example.org",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "2.2.2.3"
+      }
+    },
+    {
+      "name": "wc.example.org",
+      "type": "A",
+      "ttl": 36800,
+      "data": {
+        "ip": "1.2.3.56"
+      }
+    },
+    {
+      "name": "*.wc.example.org",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "6.7.6.7"
+      }
+    },
+    {
+      "name": "*.wc.example.org",
+      "type": "MX",
+      "ttl": 3600,
+      "data": {
+        "preference": 10,
+        "exchange": "mx.example.org"
+      }
+    },
+    {
+      "name": "exist.wc.example.org",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "1.2.3.9"
+      }
+    },
+    {
+      "name": "wcadd.example.org",
+      "type": "MX",
+      "ttl": 3600,
+      "data": {
+        "preference": 10,
+        "exchange": "mail.wc.example.org"
+      }
+    },
+    {
+      "name": "www.example.org",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "1.5.8.8"
+      }
+    },
+    {
+      "name": "www.example.org",
+      "type": "AAAA",
+      "ttl": 3600,
+      "data": {
+        "ip": "1::3"
+      }
+    }
+  ]
+}

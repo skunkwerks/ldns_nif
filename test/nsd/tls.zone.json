@@ -1,0 +1,99 @@
+{
+  "name": "example.com",
+  "records": [
+    {
+      "name": "example.com",
+      "type": "SOA",
+      "ttl": 345600,
+      "data": {
+        "mname": "ns0.example.org",
+        "rname": "d.example.com",
+        "serial": 4,
+        "refresh": 3600,
+        "retry": 28800,
+        "expire": 2419200,
+        "minimum": 3600
+      }
+    },
+    {
+      "name": "example.com",
+      "type": "NS",
+      "ttl": 3600,
+      "data": {
+        "dname": "ns2.example.com"
+      }
+    },
+    {
+      "name": "example.com",
+      "type": "NS",
+      "ttl": 3600,
+      "data": {
+        "dname": "ns4.example.com"
+      }
+    },
+    {
+      "name": "example.com",
+      "type": "NS",
+      "ttl": 3600,
+      "data": {
+        "dname": "ns23.example.org"
+      }
+    },
+    {
+      "name": "example.com",
+      "type": "NS",
+      "ttl": 3600,
+      "data": {
+        "dname": "bigserv.example.net"
+      }
+    },
+    {
+      "name": "large.example.com",
+      "type": "TXT",
+      "ttl": 3600,
+      "data": {
+        "txt": "a large piece of text. ePt96U64d3ay2CtOPrRnFdo1fX5DM37esC+bODJO2f0WuBQekL/Lou9G I65yQi6z9kyweygmE7Gy0dc2yeiwlovm26hM7Ji43eCeaT2oaIWrcns5 WLEdDp/u+jINe/kwNBpA+UUu0AOrBE0N+7xmniKPSCMR1q51ty8wAUCM LR8="
+      }
+    },
+    {
+      "name": "large.example.com",
+      "type": "TXT",
+      "ttl": 3600,
+      "data": {
+        "txt": "2 a large piece of text. ePt96U64d3ay2CtOPrRnFdo1fX5DM37esC+bODJO2f0WuBQekL/Lou9G I65yQi6z9kyweygmE7Gy0dc2yeiwlovm26hM7Ji43eCeaT2oaIWrcns5 WLEdDp/u+jINe/kwNBpA+UUu0AOrBE0N+7xmniKPSCMR1q51ty8wAUCM LR8="
+      }
+    },
+    {
+      "name": "large.example.com",
+      "type": "TXT",
+      "ttl": 3600,
+      "data": {
+        "txt": "3 a large piece of text. ePt96U64d3ay2CtOPrRnFdo1fX5DM37esC+bODJO2f0WuBQekL/Lou9G I65yQi6z9kyweygmE7Gy0dc2yeiwlovm26hM7Ji43eCeaT2oaIWrcns5 WLEdDp/u+jINe/kwNBpA+UUu0AOrBE0N+7xmniKPSCMR1q51ty8wAUCM LR8="
+      }
+    },
+    {
+      "name": "ns2.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "192.0.1.2"
+      }
+    },
+    {
+      "name": "ns4.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "192.0.1.4"
+      }
+    },
+    {
+      "name": "www.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "192.0.2.10"
+      }
+    }
+  ]
+}

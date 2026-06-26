@@ -1,0 +1,19 @@
+{
+  "name": "",
+  "records": [
+    {
+      "name": "",
+      "type": "SOA",
+      "ttl": 345600,
+      "data": {
+        "mname": "ns0.example.org",
+        "rname": "root.example.com",
+        "serial": 1,
+        "refresh": 1,
+        "retry": 1,
+        "expire": 1,
+        "minimum": 1
+      }
+    }
+  ]
+}

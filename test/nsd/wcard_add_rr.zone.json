@@ -1,0 +1,67 @@
+{
+  "name": "example.nl",
+  "records": [
+    {
+      "name": "example.nl",
+      "type": "SOA",
+      "ttl": 3600,
+      "data": {
+        "mname": "bla.example.nl",
+        "rname": "root.example.nl",
+        "serial": 2003070707,
+        "refresh": 3600,
+        "retry": 28800,
+        "expire": 2419200,
+        "minimum": 3600
+      }
+    },
+    {
+      "name": "example.nl",
+      "type": "NS",
+      "ttl": 3600,
+      "data": {
+        "dname": "ns0.xname.org"
+      }
+    },
+    {
+      "name": "example.nl",
+      "type": "NS",
+      "ttl": 3600,
+      "data": {
+        "dname": "ns1.xname.org"
+      }
+    },
+    {
+      "name": "*.name.example.nl",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "10.11.13.14"
+      }
+    },
+    {
+      "name": "sub.example.nl",
+      "type": "NS",
+      "ttl": 3600,
+      "data": {
+        "dname": "ns0.name.example.nl"
+      }
+    },
+    {
+      "name": "sub.example.nl",
+      "type": "NS",
+      "ttl": 3600,
+      "data": {
+        "dname": "uchi.sub.example.nl"
+      }
+    },
+    {
+      "name": "uchi.sub.example.nl",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "10.11.12.13"
+      }
+    }
+  ]
+}

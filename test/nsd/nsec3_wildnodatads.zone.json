@@ -1,0 +1,317 @@
+{
+  "name": "example.com",
+  "records": [
+    {
+      "name": "example.com",
+      "type": "SOA",
+      "ttl": 3600,
+      "data": {
+        "mname": "example.com",
+        "rname": "hostmaster.example.com",
+        "serial": 1557659646,
+        "refresh": 3600,
+        "retry": 900,
+        "expire": 1209600,
+        "minimum": 1800
+      }
+    },
+    {
+      "name": "example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "62.210.110.7"
+      }
+    },
+    {
+      "name": "example.com",
+      "type": "NS",
+      "ttl": 3600,
+      "data": {
+        "dname": "ns.example.com"
+      }
+    },
+    {
+      "name": "example.com",
+      "type": "MX",
+      "ttl": 3600,
+      "data": {
+        "preference": 5,
+        "exchange": "mx.example.com"
+      }
+    },
+    {
+      "name": "1.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "10.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "11.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "12.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "13.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "14.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "15.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "16.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "17.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "18.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "19.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "2.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "20.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "21.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "22.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "23.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "24.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "25.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "26.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "27.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "28.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "29.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "3.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "30.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "4.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "5.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "6.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "7.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "8.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "9.aa.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "*.c.d.example.com",
+      "type": "MX",
+      "ttl": 3600,
+      "data": {
+        "preference": 5,
+        "exchange": "mx.example.com"
+      }
+    },
+    {
+      "name": "*.c.d.example.com",
+      "type": "TXT",
+      "ttl": 3600,
+      "data": {
+        "txt": "text record with mail permissions"
+      }
+    },
+    {
+      "name": "mx.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "62.210.110.7"
+      }
+    },
+    {
+      "name": "ns.example.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "62.210.110.7"
+      }
+    }
+  ]
+}

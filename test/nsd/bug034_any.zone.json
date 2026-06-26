@@ -1,0 +1,61 @@
+{
+  "name": "example.nl",
+  "records": [
+    {
+      "name": "example.nl",
+      "type": "SOA",
+      "ttl": 345600,
+      "data": {
+        "mname": "open.nlnetlabs.nl",
+        "rname": "miekg.atoom.net",
+        "serial": 2005061300,
+        "refresh": 14400,
+        "retry": 3600,
+        "expire": 604800,
+        "minimum": 86400
+      }
+    },
+    {
+      "name": "example.nl",
+      "type": "NS",
+      "ttl": 345600,
+      "data": {
+        "dname": "open.nlnetlabs.nl"
+      }
+    },
+    {
+      "name": "example.nl",
+      "type": "MX",
+      "ttl": 345600,
+      "data": {
+        "preference": 20,
+        "exchange": "sol.nlnetlabs.nl"
+      }
+    },
+    {
+      "name": "example.nl",
+      "type": "MX",
+      "ttl": 345600,
+      "data": {
+        "preference": 20,
+        "exchange": "mail.atoom.net"
+      }
+    },
+    {
+      "name": "a.example.nl",
+      "type": "A",
+      "ttl": 345600,
+      "data": {
+        "ip": "80.127.17.126"
+      }
+    },
+    {
+      "name": "www.example.nl",
+      "type": "CNAME",
+      "ttl": 345600,
+      "data": {
+        "dname": "a.example.nl"
+      }
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "name": "bug236_rrs_before_soa.net",
+  "records": [
+    {
+      "name": "bug236_rrs_before_soa.net",
+      "type": "SOA",
+      "ttl": 10200,
+      "data": {
+        "mname": "bug236_rrs_before_soa.net",
+        "rname": "matthijs.nlnetlabs.nl",
+        "serial": 1231944945,
+        "refresh": 20400,
+        "retry": 3600,
+        "expire": 604800,
+        "minimum": 3600
+      }
+    },
+    {
+      "name": "bug236_rrs_before_soa.net",
+      "type": "A",
+      "ttl": 10200,
+      "data": {
+        "ip": "213.154.224.18"
+      }
+    },
+    {
+      "name": "bug236_rrs_before_soa.net",
+      "type": "A",
+      "ttl": 10200,
+      "data": {
+        "ip": "213.154.224.19"
+      }
+    },
+    {
+      "name": "bug236_rrs_before_soa.net",
+      "type": "NS",
+      "ttl": 10200,
+      "data": {
+        "dname": "ns1.bug236_rrs_before_soa.net"
+      }
+    },
+    {
+      "name": "bug236_rrs_before_soa.net",
+      "type": "NS",
+      "ttl": 10200,
+      "data": {
+        "dname": "ns2.bug236_rrs_before_soa.net"
+      }
+    },
+    {
+      "name": "bug236_rrs_before_soa.net",
+      "type": "AAAA",
+      "ttl": 10200,
+      "data": {
+        "ip": "2001:7b8:206:1:219:d1ff:feb1:85e8"
+      }
+    },
+    {
+      "name": "bug236_rrs_before_soa.net",
+      "type": "AAAA",
+      "ttl": 10200,
+      "data": {
+        "ip": "2001:7b8:206:1:219:d1ff:feb1:85e9"
+      }
+    },
+    {
+      "name": "ns1.child.bug236_rrs_before_soa.net",
+      "type": "A",
+      "ttl": 10200,
+      "data": {
+        "ip": "192.2.1.2"
+      }
+    },
+    {
+      "name": "ns1.child.bug236_rrs_before_soa.net",
+      "type": "AAAA",
+      "ttl": 10200,
+      "data": {
+        "ip": "2001:7b8:206:1:219:d1ff:feb1:85e9"
+      }
+    },
+    {
+      "name": "ns2.child.bug236_rrs_before_soa.net",
+      "type": "A",
+      "ttl": 10200,
+      "data": {
+        "ip": "192.2.2.2"
+      }
+    },
+    {
+      "name": "child2.bug236_rrs_before_soa.net",
+      "type": "NS",
+      "ttl": 10200,
+      "data": {
+        "dname": "ns1.child.bug236_rrs_before_soa.net"
+      }
+    },
+    {
+      "name": "child2.bug236_rrs_before_soa.net",
+      "type": "NS",
+      "ttl": 10200,
+      "data": {
+        "dname": "ns2.child.bug236_rrs_before_soa.net"
+      }
+    },
+    {
+      "name": "ns1.bug236_rrs_before_soa.net",
+      "type": "A",
+      "ttl": 10200,
+      "data": {
+        "ip": "213.154.224.18"
+      }
+    },
+    {
+      "name": "ns1.bug236_rrs_before_soa.net",
+      "type": "AAAA",
+      "ttl": 10200,
+      "data": {
+        "ip": "2001:7b8:206:1:219:d1ff:feb1:85e8"
+      }
+    },
+    {
+      "name": "ns2.bug236_rrs_before_soa.net",
+      "type": "A",
+      "ttl": 10200,
+      "data": {
+        "ip": "213.154.224.18"
+      }
+    },
+    {
+      "name": "ns2.bug236_rrs_before_soa.net",
+      "type": "AAAA",
+      "ttl": 10200,
+      "data": {
+        "ip": "2001:7b8:206:1:219:d1ff:feb1:85e8"
+      }
+    }
+  ]
+}

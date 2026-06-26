@@ -1,0 +1,59 @@
+{
+  "name": "example.com",
+  "records": [
+    {
+      "name": "example.com",
+      "type": "SOA",
+      "ttl": 345600,
+      "data": {
+        "mname": "ns0.example.org",
+        "rname": "root.example.com",
+        "serial": 1,
+        "refresh": 3600,
+        "retry": 28800,
+        "expire": 2419200,
+        "minimum": 3600
+      }
+    },
+    {
+      "name": "example.com",
+      "type": "NS",
+      "ttl": 345600,
+      "data": {
+        "dname": "ns0.example.org"
+      }
+    },
+    {
+      "name": "example.com",
+      "type": "NS",
+      "ttl": 345600,
+      "data": {
+        "dname": "ns1.example.org"
+      }
+    },
+    {
+      "name": "txt1.example.com",
+      "type": "TXT",
+      "ttl": 345600,
+      "data": {
+        "txt": "text record 1"
+      }
+    },
+    {
+      "name": "txt2.example.com",
+      "type": "TXT",
+      "ttl": 345600,
+      "data": {
+        "txt": "text record 2"
+      }
+    },
+    {
+      "name": "txt3.example.com",
+      "type": "TXT",
+      "ttl": 345600,
+      "data": {
+        "txt": "text record 3"
+      }
+    }
+  ]
+}

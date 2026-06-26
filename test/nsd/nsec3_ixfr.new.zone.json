@@ -1,0 +1,155 @@
+{
+  "name": "example.net",
+  "records": [
+    {
+      "name": "example.net",
+      "type": "SOA",
+      "ttl": 345600,
+      "data": {
+        "mname": "nibbler.example.net",
+        "rname": "leela.example.net",
+        "serial": 2,
+        "refresh": 3,
+        "retry": 4,
+        "expire": 3000,
+        "minimum": 5
+      }
+    },
+    {
+      "name": "addrr.example.net",
+      "type": "A",
+      "ttl": 345600,
+      "data": {
+        "ip": "1.2.3.4"
+      }
+    },
+    {
+      "name": "addrr.example.net",
+      "type": "A",
+      "ttl": 345600,
+      "data": {
+        "ip": "2.3.4.5"
+      }
+    },
+    {
+      "name": "addrrset.example.net",
+      "type": "A",
+      "ttl": 345600,
+      "data": {
+        "ip": "1.2.3.4"
+      }
+    },
+    {
+      "name": "addrrset.example.net",
+      "type": "A",
+      "ttl": 345600,
+      "data": {
+        "ip": "1.2.3.5"
+      }
+    },
+    {
+      "name": "addrrset.example.net",
+      "type": "TXT",
+      "ttl": 345600,
+      "data": {
+        "txt": "this is an rrset"
+      }
+    },
+    {
+      "name": "addrrset.example.net",
+      "type": "AAAA",
+      "ttl": 345600,
+      "data": {
+        "ip": "::234"
+      }
+    },
+    {
+      "name": "addrrset.example.net",
+      "type": "AAAA",
+      "ttl": 345600,
+      "data": {
+        "ip": "::237"
+      }
+    },
+    {
+      "name": "delrr.example.net",
+      "type": "A",
+      "ttl": 345600,
+      "data": {
+        "ip": "1.2.3.5"
+      }
+    },
+    {
+      "name": "delrr.example.net",
+      "type": "A",
+      "ttl": 345600,
+      "data": {
+        "ip": "1.2.3.6"
+      }
+    },
+    {
+      "name": "newname.example.net",
+      "type": "A",
+      "ttl": 345600,
+      "data": {
+        "ip": "1.2.3.4"
+      }
+    },
+    {
+      "name": "othername.example.net",
+      "type": "A",
+      "ttl": 345600,
+      "data": {
+        "ip": "6.5.6.5"
+      }
+    },
+    {
+      "name": "othername.example.net",
+      "type": "AAAA",
+      "ttl": 345600,
+      "data": {
+        "ip": "::65"
+      }
+    },
+    {
+      "name": "unmodified.example.net",
+      "type": "A",
+      "ttl": 345600,
+      "data": {
+        "ip": "8.8.8.6"
+      }
+    },
+    {
+      "name": "unmodified.example.net",
+      "type": "A",
+      "ttl": 345600,
+      "data": {
+        "ip": "8.8.8.6"
+      }
+    },
+    {
+      "name": "unmodified.example.net",
+      "type": "A",
+      "ttl": 345600,
+      "data": {
+        "ip": "8.8.8.7"
+      }
+    },
+    {
+      "name": "unmodified.example.net",
+      "type": "A",
+      "ttl": 345600,
+      "data": {
+        "ip": "8.8.8.8"
+      }
+    },
+    {
+      "name": "unmodified.example.net",
+      "type": "TXT",
+      "ttl": 345600,
+      "data": {
+        "txt": "this entry has not been modified"
+      }
+    }
+  ]
+}

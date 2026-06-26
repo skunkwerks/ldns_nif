@@ -24,26 +24,6 @@ defmodule LDNSTest do
     assert is_binary(msg)
   end
 
-  @fixtures "test/nsd"
-
-  test "validates all zone files in fixtures" do
-    File.ls!(@fixtures)
-    |> Enum.filter(&String.ends_with?(&1, ".zone"))
-    |> Enum.each(&validate_fixture/1)
-  end
-
-  defp validate_fixture(filename) do
-    path = Path.join(@fixtures, filename)
-    contents = File.read!(path)
-    result = LDNS.validate(contents)
-
-    if String.starts_with?(filename, "fail_") do
-      assert match?({:error, _, _, _}, result), "Expected #{filename} to be invalid"
-    else
-      assert result == :ok, "Expected #{filename} to be valid"
-    end
-  end
-
   @invalid_fixtures "test/invalid"
 
   describe "invalid zone files" do
@@ -78,20 +58,61 @@ defmodule LDNSTest do
     end
   end
 
-  describe "to_json/1" do
-    test "converts zone files to JSON format" do
-      # Get all .zone files in test/json
-      zones = Path.wildcard("test/json/*.zone")
+  describe "nsd validate fixtures" do
+    for path <- Path.wildcard("test/nsd/*.zone") do
+      filename = Path.basename(path)
 
-      for zone <- zones do
-        json = String.replace(zone, ".zone", ".json")
+      if String.starts_with?(filename, "fail_") do
+        test "#{filename} is invalid" do
+          contents = File.read!(unquote(path))
+          assert {:error, _, _, _} = LDNS.validate(contents)
+        end
+      else
+        test "#{filename} is valid" do
+          contents = File.read!(unquote(path))
+          assert :ok == LDNS.validate(contents), "Expected #{unquote(filename)} to be valid"
+        end
+      end
+    end
+  end
 
-        expected = File.read!(json)
-        {:ok, converted} = LDNS.to_json(File.read!(zone))
-        assert expected == converted
+  describe "nsd to_json fixtures" do
+    for path <- Path.wildcard("test/nsd/*.zone"),
+        json_path = path <> ".json",
+        File.exists?(json_path) do
+      filename = Path.basename(path)
 
-        assert {:ok, _decoded} = Jason.decode(converted),
-               "JSON conversion failed for #{Path.basename(zone)}"
+      test "#{filename} converts to expected JSON" do
+        contents = File.read!(unquote(path))
+        expected = File.read!(unquote(json_path))
+
+        {:ok, converted} = LDNS.to_json(contents)
+
+        assert expected == converted,
+               "JSON mismatch for #{unquote(filename)}"
+
+        assert {:ok, _} = Jason.decode(converted),
+               "Invalid JSON output for #{unquote(filename)}"
+      end
+    end
+  end
+
+  describe "json to_json fixtures" do
+    for path <- Path.wildcard("test/json/*.zone") do
+      filename = Path.basename(path)
+      json_path = String.replace(path, ".zone", ".json")
+
+      test "#{filename} converts to expected JSON" do
+        contents = File.read!(unquote(path))
+        expected = File.read!(unquote(json_path))
+
+        {:ok, converted} = LDNS.to_json(contents)
+
+        assert expected == converted,
+               "JSON mismatch for #{unquote(filename)}"
+
+        assert {:ok, _} = Jason.decode(converted),
+               "Invalid JSON output for #{unquote(filename)}"
       end
     end
   end

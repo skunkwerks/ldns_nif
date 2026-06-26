@@ -1,0 +1,64 @@
+{
+  "name": "example.com",
+  "records": [
+    {
+      "name": "example.com",
+      "type": "SOA",
+      "ttl": 86400,
+      "data": {
+        "mname": "ns0.example.com",
+        "rname": "hostmaster.example.com",
+        "serial": 2006012401,
+        "refresh": 3600,
+        "retry": 1800,
+        "expire": 86400,
+        "minimum": 86400
+      }
+    },
+    {
+      "name": "bla.example.com",
+      "type": "HINFO",
+      "ttl": 86400,
+      "data": {
+        "cpu": "ab\\\"de",
+        "os": "zup"
+      }
+    },
+    {
+      "name": "bla2.example.com",
+      "type": "HINFO",
+      "ttl": 86400,
+      "data": {
+        "cpu": "",
+        "os": "ab"
+      }
+    },
+    {
+      "name": "test.example.com",
+      "type": "HINFO",
+      "ttl": 86400,
+      "data": {
+        "cpu": "one\\\\",
+        "os": "two"
+      }
+    },
+    {
+      "name": "test2.example.com",
+      "type": "HINFO",
+      "ttl": 86400,
+      "data": {
+        "cpu": "one\\\\two",
+        "os": "pp"
+      }
+    },
+    {
+      "name": "test3.example.com",
+      "type": "HINFO",
+      "ttl": 86400,
+      "data": {
+        "cpu": "\\\\three",
+        "os": "o0"
+      }
+    }
+  ]
+}

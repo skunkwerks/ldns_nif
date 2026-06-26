@@ -1,0 +1,109 @@
+{
+  "name": "",
+  "records": [
+    {
+      "name": "",
+      "type": "SOA",
+      "ttl": 3600,
+      "data": {
+        "mname": "42dbc308.dsl.aros.net",
+        "rname": "drr.aros.net",
+        "serial": 2003070707,
+        "refresh": 3600,
+        "retry": 28800,
+        "expire": 2419200,
+        "minimum": 3600
+      }
+    },
+    {
+      "name": "edmundrichardson.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "66.219.195.8"
+      }
+    },
+    {
+      "name": "edmundrichardson.com",
+      "type": "NS",
+      "ttl": 3600,
+      "data": {
+        "dname": "ns0.xname.org"
+      }
+    },
+    {
+      "name": "edmundrichardson.com",
+      "type": "NS",
+      "ttl": 3600,
+      "data": {
+        "dname": "ns1.xname.org"
+      }
+    },
+    {
+      "name": "edmundrichardson.com",
+      "type": "MX",
+      "ttl": 3600,
+      "data": {
+        "preference": 10,
+        "exchange": "mail"
+      }
+    },
+    {
+      "name": "*.edmundrichardson.com",
+      "type": "MX",
+      "ttl": 3600,
+      "data": {
+        "preference": 10,
+        "exchange": "mail"
+      }
+    },
+    {
+      "name": "blaat.edmundrichardson.com",
+      "type": "NS",
+      "ttl": 3600,
+      "data": {
+        "dname": "ns.blaat.edmundrichardson.com"
+      }
+    },
+    {
+      "name": "ns.blaat.edmundrichardson.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "ns2.blaat.edmundrichardson.com",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "localhost",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "name": "mail",
+      "type": "CNAME",
+      "ttl": 3600,
+      "data": {
+        "dname": "42dbc308.dsl.aros.net"
+      }
+    },
+    {
+      "name": "www",
+      "type": "CNAME",
+      "ttl": 3600,
+      "data": {
+        "dname": "edmundrichardson.com"
+      }
+    }
+  ]
+}

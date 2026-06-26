@@ -1,0 +1,59 @@
+{
+  "name": "",
+  "records": [
+    {
+      "name": "",
+      "type": "SOA",
+      "ttl": 3600,
+      "data": {
+        "mname": "mainserv.example.net",
+        "rname": "root.example",
+        "serial": 2003070707,
+        "refresh": 3600,
+        "retry": 28800,
+        "expire": 2419200,
+        "minimum": 3600
+      }
+    },
+    {
+      "name": "example",
+      "type": "NS",
+      "ttl": 3600,
+      "data": {
+        "dname": "ns0.xname.org"
+      }
+    },
+    {
+      "name": "example",
+      "type": "NS",
+      "ttl": 3600,
+      "data": {
+        "dname": "ns1.xname.org"
+      }
+    },
+    {
+      "name": "x.example",
+      "type": "DNAME",
+      "ttl": 3600,
+      "data": {
+        "dname": "y.example"
+      }
+    },
+    {
+      "name": "a.b.x.example",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "10.0.0.12"
+      }
+    },
+    {
+      "name": "a.y.example",
+      "type": "A",
+      "ttl": 3600,
+      "data": {
+        "ip": "10.0.0.10"
+      }
+    }
+  ]
+}

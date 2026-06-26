@@ -1,0 +1,43 @@
+{
+  "name": "",
+  "records": [
+    {
+      "name": "",
+      "type": "SOA",
+      "ttl": 3600,
+      "data": {
+        "mname": "bla",
+        "rname": "root",
+        "serial": 2003070707,
+        "refresh": 3600,
+        "retry": 28800,
+        "expire": 2419200,
+        "minimum": 3600
+      }
+    },
+    {
+      "name": "",
+      "type": "NS",
+      "ttl": 3600,
+      "data": {
+        "dname": "ns0.xname.org"
+      }
+    },
+    {
+      "name": "",
+      "type": "NS",
+      "ttl": 3600,
+      "data": {
+        "dname": "ns1.xname.org"
+      }
+    },
+    {
+      "name": "test",
+      "type": "TXT",
+      "ttl": 3600,
+      "data": {
+        "txt": "text record info"
+      }
+    }
+  ]
+}

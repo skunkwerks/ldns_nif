@@ -1,0 +1,57 @@
+{
+  "name": "",
+  "records": [
+    {
+      "name": "",
+      "type": "SOA",
+      "ttl": 3600,
+      "data": {
+        "mname": "leela.net",
+        "rname": "leela.futurama.net",
+        "serial": 2003070707,
+        "refresh": 3600,
+        "retry": 28800,
+        "expire": 2419200,
+        "minimum": 3600
+      }
+    },
+    {
+      "name": "nibbler.net",
+      "type": "NS",
+      "ttl": 3600,
+      "data": {
+        "dname": "ns0.nibbler.net"
+      }
+    },
+    {
+      "name": "nibbler.net",
+      "type": "NS",
+      "ttl": 3600,
+      "data": {
+        "dname": "ns1.nibbler.net"
+      }
+    },
+    {
+      "name": "nibbler.net",
+      "type": "DNSKEY",
+      "ttl": 3600,
+      "data": {
+        "flags": 256,
+        "protocol": 3,
+        "alg": "5",
+        "public_key": "AwEAAcQxaN2Wa9pSgzQS1iiMOybZau47jt+VILLzaqn82OEoQ+Vx36KiZQ74WPB7/qxO6Nqv22pTc6WR8TarLPEdEpnUlpO/sxTkGWKaqlLOop/y1PcrMWpA0T1uo6GygxXJtL2ONGz8tx9Qt+eiBIKz6UAVELwi1PNhbE4hE8E9qD9P"
+      }
+    },
+    {
+      "name": "nibbler.net",
+      "type": "DNSKEY",
+      "ttl": 3600,
+      "data": {
+        "flags": 257,
+        "protocol": 3,
+        "alg": "5",
+        "public_key": "AwEAAbuHsfXj7728DUemeaLTiYAxx5QMZKQVgRhIA0/TAuW51yRcW5F6KZw+zUn+obnghvKSFfzgAU5MFZ7STFYi8s536NWqKB4qTqH5y1T2urspFBfF5NPBTkEO5Bqe7dB799A413W7R81Xc4BryXNb4FVZjdMSEUhQ4AkgeluHuSJz"
+      }
+    }
+  ]
+}
