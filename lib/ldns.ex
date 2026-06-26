@@ -33,6 +33,9 @@ defmodule LDNS do
       iex> LDNS.validate("example.com. 3600 IN A 256.256.256.256")
       {:error, :rdata_error, 1, "Syntax error, could not parse the RR's rdata"}
 
+      iex> LDNS.validate(File.read!("test/invalid/bad.zone"))
+      :ok
+
   """
   def validate(binary) when is_binary(binary) do
     binary |> ensure_trailing_newline() |> zone_validate()
