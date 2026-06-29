@@ -389,6 +389,116 @@ defmodule LDNSTest do
     end
   end
 
+  describe "long TXT/SPF records (>72 bytes)" do
+    @dkim_txt "v=DKIM1; h=sha256; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA" <>
+                "7OgTbXW6LJqZkP9S+q4ZVbYG6PEAaJMXfsTbBk/pcEi97v2TIQgWE76FFkB0CW3vOGRhMXtw" <>
+                "VKv7M6A7mHL/BZ+zzMMyeYaaa+kw8CvYb2m7LCNTl2Xm++xpC9X7ETv8EEGZ2CPbVXxaZ6In" <>
+                "VLwdV717cdUQVnKozIWMk5xzTbXXZzCCDnvvom0d2eJYodChFganiJ74PWeq0nzGaeLnHReg" <>
+                "zf0vMi1Iq1Diab3Ws42oUlalRE7N62zBDwIKGL4h7yEvfR1Vxf4ffvfW8IiE6UhUX9eXrn8q" <>
+                "UkqPx5lfeJnwShITuGIGNtQR/djork4GFpqF32XvoyquEFt2RpAwHQIDAQAB"
+
+    test "NIF concatenates multi-rdf TXT into single string" do
+      zone = File.read!("test/json/long_txt.zone")
+      {:ok, json} = LDNS.to_json(zone)
+      data = Jason.decode!(json)
+      txt_rec = Enum.find(data["records"], &(&1["type"] == "TXT"))
+      assert txt_rec["data"]["txt"] == @dkim_txt
+      assert byte_size(@dkim_txt) > 72
+    end
+
+    test "NIF concatenates multi-rdf SPF into single string" do
+      zone = File.read!("test/json/long_spf.zone")
+      {:ok, json} = LDNS.to_json(zone)
+      data = Jason.decode!(json)
+      spf_rec = Enum.find(data["records"], &(&1["type"] == "SPF"))
+      txt = spf_rec["data"]["txt"]
+      assert byte_size(txt) > 72
+      assert String.starts_with?(txt, "v=spf1 ")
+      assert String.ends_with?(txt, "-all")
+    end
+
+    test "RR.to_line splits TXT data > 72 bytes" do
+      {:ok, line} =
+        LDNS.RR.to_line(%{
+          "name" => "example.com",
+          "type" => "TXT",
+          "ttl" => 300,
+          "data" => %{"txt" => @dkim_txt}
+        })
+
+      parts = Regex.scan(~r/"[^"]+"/, line)
+      assert length(parts) > 1
+      Enum.each(parts, fn [part] ->
+        inner = String.slice(part, 1..-2//1)
+        assert byte_size(inner) <= 72
+      end)
+    end
+
+    test "RR.to_line does not split TXT data <= 72 bytes" do
+      short = String.duplicate("a", 72)
+
+      {:ok, line} =
+        LDNS.RR.to_line(%{
+          "name" => "example.com",
+          "type" => "TXT",
+          "ttl" => 300,
+          "data" => %{"txt" => short}
+        })
+
+      refute line =~ ~r/"\s+"/
+    end
+
+    test "RR.to_line splits SPF data > 72 bytes" do
+      long_spf = "v=spf1 " <> String.duplicate("ip4:10.0.0.0/24 ", 16) <> "-all"
+      assert byte_size(long_spf) > 72
+
+      {:ok, line} =
+        LDNS.RR.to_line(%{
+          "name" => "example.com",
+          "type" => "SPF",
+          "ttl" => 300,
+          "data" => %{"txt" => long_spf}
+        })
+
+      parts = Regex.scan(~r/"[^"]+"/, line)
+      assert length(parts) > 1
+      Enum.each(parts, fn [part] ->
+        inner = String.slice(part, 1..-2//1)
+        assert byte_size(inner) <= 72
+      end)
+    end
+
+    test "long TXT round-trip: zone -> json -> zone -> json" do
+      zone = File.read!("test/json/long_txt.zone")
+      {:ok, json1} = LDNS.to_json(zone)
+      {:ok, zone2} = LDNS.to_zone(json1)
+      {:ok, json2} = LDNS.to_json(zone2)
+      assert json1 == json2
+    end
+
+    test "long SPF round-trip: zone -> json -> zone -> json" do
+      zone = File.read!("test/json/long_spf.zone")
+      {:ok, json1} = LDNS.to_json(zone)
+      {:ok, zone2} = LDNS.to_zone(json1)
+      {:ok, json2} = LDNS.to_json(zone2)
+      assert json1 == json2
+    end
+
+    test "long TXT round-trip: json -> zone -> json" do
+      json = File.read!("test/json/long_txt.json")
+      {:ok, zone} = LDNS.to_zone(json)
+      {:ok, json2} = LDNS.to_json(zone)
+      assert json == json2
+    end
+
+    test "long SPF round-trip: json -> zone -> json" do
+      json = File.read!("test/json/long_spf.json")
+      {:ok, zone} = LDNS.to_zone(json)
+      {:ok, json2} = LDNS.to_json(zone)
+      assert json == json2
+    end
+  end
+
   describe "json round-trip (json -> zone -> json)" do
     for path <- Path.wildcard("test/json/*.json") do
       filename = Path.basename(path)
