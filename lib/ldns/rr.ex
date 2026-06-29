@@ -3,6 +3,8 @@ defmodule LDNS.RR do
   Converts DNS record maps (from JSON) into zone file line strings.
   """
 
+  @txt_split_size 72
+
   @doc """
   Converts a DNS record map into a zone file line string.
 
@@ -52,9 +54,9 @@ defmodule LDNS.RR do
 
   defp rdata("MX", d), do: "#{d["preference"]} #{fqdn(d["exchange"])}"
 
-  defp rdata("TXT", d), do: "\"#{d["txt"]}\""
+  defp rdata("TXT", d), do: split_txt(d["txt"])
 
-  defp rdata("SPF", d), do: "\"#{d["txt"]}\""
+  defp rdata("SPF", d), do: split_txt(d["txt"])
 
   defp rdata("SRV", d) do
     "#{d["priority"]} #{d["weight"]} #{d["port"]} #{fqdn(d["target"])}"
@@ -105,4 +107,23 @@ defmodule LDNS.RR do
   defp rdata("LOC", d), do: d["loc"]
 
   defp rdata(_type, _data), do: :unsupported
+
+  defp split_txt(txt) when byte_size(txt) <= @txt_split_size do
+    "\"#{txt}\""
+  end
+
+  defp split_txt(txt) do
+    txt
+    |> chunk_string(@txt_split_size)
+    |> Enum.map_join(" ", &"\"#{&1}\"")
+  end
+
+  defp chunk_string(<<>>, _size), do: []
+
+  defp chunk_string(str, size) when byte_size(str) <= size, do: [str]
+
+  defp chunk_string(str, size) do
+    <<chunk::binary-size(^size), rest::binary>> = str
+    [chunk | chunk_string(rest, size)]
+  end
 end
